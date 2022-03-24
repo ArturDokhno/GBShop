@@ -27,6 +27,7 @@
 		75E2F73B27EC43800029DE5C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73A27EC43800029DE5C /* RequestFactory.swift */; };
 		75E2F73D27EC56670029DE5C /* GBShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E2F73C27EC56670029DE5C /* GBShop.storyboard */; };
 		75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73E27EC56790029DE5C /* GBShopViewController.swift */; };
+		75E2F74127EC9EED0029DE5C /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F74027EC9EEC0029DE5C /* LogoutResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		75E2F73A27EC43800029DE5C /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		75E2F73C27EC56670029DE5C /* GBShop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GBShop.storyboard; sourceTree = "<group>"; };
 		75E2F73E27EC56790029DE5C /* GBShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopViewController.swift; sourceTree = "<group>"; };
+		75E2F74027EC9EEC0029DE5C /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +184,9 @@
 		75CDE50A27D6378B0038488B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				75A69E2527EB64B3002AE8E5 /* LoginResult.swift */,
 				75E2F73327EB65710029DE5C /* User.swift */,
+				75A69E2527EB64B3002AE8E5 /* LoginResult.swift */,
+				75E2F74027EC9EEC0029DE5C /* LogoutResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				75E2F73B27EC43800029DE5C /* RequestFactory.swift in Sources */,
 				75CDE4D927D62B170038488B /* AppDelegate.swift in Sources */,
+				75E2F74127EC9EED0029DE5C /* LogoutResult.swift in Sources */,
 				75A69E1E27EB4909002AE8E5 /* ResponseCodable.swift in Sources */,
 				75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */,
 				75E2F73727EB66250029DE5C /* AuthRequestFactory.swift in Sources */,
