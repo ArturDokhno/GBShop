@@ -233,8 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				75E2F73627EB66250029DE5C /* AuthRequestFactory.swift */,
-				75E2F73827EB671C0029DE5C /* Auth.swift */,
 				75E2F73A27EC43800029DE5C /* RequestFactory.swift */,
+				75E2F73827EB671C0029DE5C /* Auth.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
