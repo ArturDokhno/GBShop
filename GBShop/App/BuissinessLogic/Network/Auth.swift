@@ -14,29 +14,25 @@ class Auth: AbstractRequestFactory {
     let queue: DispatchQueue
     let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
     
-    init(errorParser: AbstractErrorParser,
-         sessionManager: Session,
-         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-    }
+    init(
+        errorParser: AbstractErrorParser,
+        sessionManager: Session,
+        queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
+            self.errorParser = errorParser
+            self.sessionManager = sessionManager
+            self.queue = queue
+        }
 }
 
 extension Auth: AuthRequestFactory {
     func login(user: User, completionHandler: @escaping (AFDataResponse<LoginResult>) -> Void) {
-        let requestModel = Login(baseUrl: baseUrl,
-                                 login: user.login ?? "",
-                                 password: user.password ?? "")
-        self.request(request: requestModel,
-                     completionHandler: completionHandler)
+        let requestModel = Login(baseUrl: baseUrl, login: user.login ?? "", password: user.password ?? "")
+        self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     func logout(user: User, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
-        let requestModel = Logout(baseUrl: baseUrl,
-                                  user: user)
-        self.request(request: requestModel,
-                     completionHandler: completionHandler)
+        let requestModel = Logout(baseUrl: baseUrl, user: user)
+        self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
