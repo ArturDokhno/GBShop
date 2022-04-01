@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7510201B27F7365600D0A5AC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */; };
 		75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */; };
 		75A69E1927EB46D9002AE8E5 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */; };
 		75A69E1C27EB48D3002AE8E5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 75A69E1B27EB48D3002AE8E5 /* Alamofire */; };
@@ -18,7 +19,6 @@
 		75CDE4DB27D62B170038488B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDE4DA27D62B170038488B /* SceneDelegate.swift */; };
 		75CDE4E227D62B180038488B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CDE4E127D62B180038488B /* Assets.xcassets */; };
 		75CDE4E527D62B180038488B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CDE4E327D62B180038488B /* LaunchScreen.storyboard */; };
-		75CDE4F027D62B180038488B /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDE4EF27D62B180038488B /* GBShopTests.swift */; };
 		75CDE4FA27D62B180038488B /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDE4F927D62B180038488B /* GBShopUITests.swift */; };
 		75CDE4FC27D62B180038488B /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CDE4FB27D62B180038488B /* GBShopUITestsLaunchTests.swift */; };
 		75E2F73427EB65710029DE5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73327EB65710029DE5C /* User.swift */; };
@@ -54,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsractErrorParser.swift; sourceTree = "<group>"; };
 		75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		75A69E1D27EB4909002AE8E5 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		75CDE4E427D62B180038488B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75CDE4E627D62B180038488B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75CDE4EB27D62B180038488B /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75CDE4EF27D62B180038488B /* GBShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopTests.swift; sourceTree = "<group>"; };
 		75CDE4F527D62B180038488B /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CDE4F927D62B180038488B /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		75CDE4FB27D62B180038488B /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		75CDE4EE27D62B180038488B /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				75CDE4EF27D62B180038488B /* GBShopTests.swift */,
+				7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */,
 			);
 			path = GBShopTests;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CDE4F027D62B180038488B /* GBShopTests.swift in Sources */,
+				7510201B27F7365600D0A5AC /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
