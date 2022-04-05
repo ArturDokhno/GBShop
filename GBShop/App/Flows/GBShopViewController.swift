@@ -18,6 +18,8 @@ class GBShopViewController: UIViewController {
         makeSignupRequest()
         makeChangeUserDataRequest()
         makeLogoutRequest()
+        makeGetCatalogRequest()
+        mageGetGoodsRequest()
     }
     
     // MARK: - Test methods.
@@ -81,6 +83,32 @@ class GBShopViewController: UIViewController {
         let user = User(id: 123)
         
         factory.logout(user: user) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeGetCatalogRequest() {
+        let factory = requestFactory.makeGetCatalogRequestFactory()
+        
+        factory.getCatalog(pageNumber: 1, categotyId: 1) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func mageGetGoodsRequest() {
+        let factory = requestFactory.makeGetGoodsRequestFactory()
+        
+        factory.getGoods(productId: 123) { response in
             switch response.result {
             case .success(let result):
                 print(result)

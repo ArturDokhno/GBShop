@@ -8,6 +8,6 @@
 import Foundation
 
 struct SignupResult: Codable {
-    let result: String
+    let result: Int
     let userMessage: String
 }
