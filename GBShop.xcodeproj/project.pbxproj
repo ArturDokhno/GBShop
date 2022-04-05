@@ -40,6 +40,7 @@
 		75FED20F27FC244A00EF5BB7 /* GetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED20E27FC244A00EF5BB7 /* GetCatalog.swift */; };
 		75FED21127FC267500EF5BB7 /* GetGoodsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED21027FC267500EF5BB7 /* GetGoodsRequestFactory.swift */; };
 		75FED21327FC26E300EF5BB7 /* GetGoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED21227FC26E300EF5BB7 /* GetGoods.swift */; };
+		75FED21527FC2B6500EF5BB7 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED21427FC2B6500EF5BB7 /* RequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		75FED20E27FC244A00EF5BB7 /* GetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalog.swift; sourceTree = "<group>"; };
 		75FED21027FC267500EF5BB7 /* GetGoodsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodsRequestFactory.swift; sourceTree = "<group>"; };
 		75FED21227FC26E300EF5BB7 /* GetGoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoods.swift; sourceTree = "<group>"; };
+		75FED21427FC2B6500EF5BB7 /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */,
+				75FED21427FC2B6500EF5BB7 /* RequestTests.swift */,
 			);
 			path = GBShopTests;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7510201B27F7365600D0A5AC /* ResponseCodableTests.swift in Sources */,
+				75FED21527FC2B6500EF5BB7 /* RequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
