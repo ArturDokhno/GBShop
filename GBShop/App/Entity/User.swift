@@ -18,18 +18,6 @@ struct User: Codable {
     let name: String?
     let lastname: String?
     
-    enum CodingKeys: String, CodingKey {
-        case id = "id_user"
-        case login = "user_login"
-        case password
-        case email
-        case gender
-        case creditCard = "credit_card"
-        case bio
-        case name = "user_name"
-        case lastname = "user_lastname"
-    }
-    
     init (id: Int? = nil,
           login: String? = nil,
           password: String? = nil,

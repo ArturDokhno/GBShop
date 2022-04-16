@@ -8,39 +8,41 @@
 import Foundation
 import Alamofire
 
-class GetGoods: AbstractRequestFactory {
+class GetGood: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://shrouded-mountain-46406.herokuapp.com/")!
     
-    init(errorParser: AbstractErrorParser,
-         sessionManager: Session,
-         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-    }
+    init(
+        errorParser: AbstractErrorParser,
+        sessionManager: Session,
+        queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
+            self.errorParser = errorParser
+            self.sessionManager = sessionManager
+            self.queue = queue
+        }
 }
 
-extension GetGoods: GetGoodsRequestFactory {
-    func getGoods(productId: Int, completionHandler: @escaping (AFDataResponse<Goods>) -> Void) {
-        let requestModel = GetGoods(baseUrl: baseUrl, productId: productId)
+extension GetGood: GetGoodsRequestFactory {
+    func getGood(productId: Int, completionHandler: @escaping (AFDataResponse<GoodResponse>) -> Void) {
+        let requestModel = GetGood(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
+    
 }
 
-extension GetGoods {
-    struct GetGoods: RequestRouter {
-        var baseUrl: URL
-        var method: HTTPMethod = .get
-        var path: String = "getGoodById.json"
-        
+extension GetGood {
+    struct GetGood: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = "getgood"
+
         let productId: Int
         
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "productId": productId
             ]
         }
     }

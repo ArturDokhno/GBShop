@@ -95,7 +95,7 @@ class GBShopViewController: UIViewController {
     func makeGetCatalogRequest() {
         let factory = requestFactory.makeGetCatalogRequestFactory()
         
-        factory.getCatalog(pageNumber: 1, categotyId: 1) { response in
+        factory.getCatalog(pageNumber: 1, categoryId: 1) { response in
             switch response.result {
             case .success(let result):
                 print(result)
@@ -108,7 +108,47 @@ class GBShopViewController: UIViewController {
     func mageGetGoodsRequest() {
         let factory = requestFactory.makeGetGoodsRequestFactory()
         
-        factory.getGoods(productId: 123) { response in
+        factory.getGood(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeGetReviewsRequest() {
+        let factory = requestFactory.makeReviewsFactory()
+        
+        factory.getReviews(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeAddReviewRequest() {
+        let factory = requestFactory.makeReviewsFactory()
+        let review = ReviewRequest(reviewText: "Товар — говно! Не берите!", userId: 123, productId: 666)
+        
+        factory.addReview(review: review){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeRemoveReviewRequest() {
+        let factory = requestFactory.makeReviewsFactory()
+        
+        factory.removeReview(reviewId: 123){ response in
             switch response.result {
             case .success(let result):
                 print(result)
