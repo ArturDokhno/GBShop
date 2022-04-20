@@ -37,7 +37,7 @@ class RequestTests: XCTestCase {
         user = nil
     }
     
-    func testPerfomrSignupResuest() {
+    func testShouldPerformSignupRequest() {
         let factory = requestFactory.makeSignupRequestFactory()
         
         factory.signup(user: user) { response in
@@ -50,7 +50,7 @@ class RequestTests: XCTestCase {
         wait(for: [expectation], timeout: timeout)
     }
     
-    func testPerformAuthRequest() {
+    func testShouldPerformAuthRequest() {
         let factory = requestFactory.makeAuthRequestFactory()
         
         factory.login(user: user) { response in
@@ -63,20 +63,7 @@ class RequestTests: XCTestCase {
         wait(for: [expectation], timeout: timeout)
     }
     
-    func testPerformLogoutRequest() {
-        let factory = requestFactory.makeAuthRequestFactory()
-        
-        factory.logout(user: user) { response in
-            switch response.result {
-            case .success(let result): XCTAssertEqual(result.result, 1)
-            case .failure: XCTFail()
-            }
-            self.expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: timeout)
-    }
-    
-    func testPerformChangeUserDataRequest() {
+    func testShouldPerformChangeUserDataRequest() {
         let factory = requestFactory.makeChangeUserDataRequestFactory()
         
         factory.changeUserData(user: user) { response in
@@ -89,10 +76,23 @@ class RequestTests: XCTestCase {
         wait(for: [expectation], timeout: timeout)
     }
     
-    func testPerformGetCatalogRequest() {
+    func testShouldPerformLogoutRequest() {
+        let factory = requestFactory.makeAuthRequestFactory()
+        
+        factory.logout(user: user) { response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
+    }
+    
+    func testShouldPerformGetCatalogRequest() {
         let factory = requestFactory.makeGetCatalogRequestFactory()
         
-        factory.getCatalog(pageNumber: 1, categotyId: 1) { response in
+        factory.getCatalog(pageNumber: 1, categoryId: 1) { response in
             switch response.result {
             case .success: break
             case .failure: XCTFail()
@@ -102,10 +102,10 @@ class RequestTests: XCTestCase {
         wait(for: [expectation], timeout: timeout)
     }
     
-    func testPerformGetGoodsRequest() {
+    func testShouldPerformGetGoodRequest() {
         let factory = requestFactory.makeGetGoodsRequestFactory()
         
-        factory.getGoods(productId: 123) { response in
+        factory.getGood(productId: 123) { response in
             switch response.result {
             case .success(let result): XCTAssertEqual(result.result, 1)
             case .failure: XCTFail()
@@ -116,7 +116,7 @@ class RequestTests: XCTestCase {
     }
     
     func testShouldPerformGetReviewsRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         
         factory.getReviews(productId: 123) { response in
             switch response.result {
@@ -125,11 +125,11 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeoutValue)
+        wait(for: [expectation], timeout: timeout)
     }
     
     func testShouldPerformAddReviewsRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         
         factory.addReview(review: ReviewRequest(reviewText: "Товар говно!!!", userId: 123, productId: 666)) { response in
             switch response.result {
@@ -138,11 +138,11 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeoutValue)
+        wait(for: [expectation], timeout: timeout)
     }
     
     func testShouldPerformRemoveReviewsRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         
         factory.removeReview(reviewId: 123) { response in
             switch response.result {
@@ -151,6 +151,58 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeoutValue)
+        wait(for: [expectation], timeout: timeout)
+    }
+    
+    func testShouldPerformGetCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.getCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result): XCTAssertNotNil(result.count)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
+    }
+    
+    func testShouldPerformPayCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.payCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
+    }
+    
+    func testShouldPerformAddToCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.addToCart(cart: CartRequest(productId: 666, quantity: 1)){ response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
+    }
+    
+    func testShouldPerformDeleteFromCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.deleteFromCart(cart: CartRequest(productId: 666)){ response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeout)
     }
 }
