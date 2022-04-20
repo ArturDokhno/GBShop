@@ -84,8 +84,8 @@ extension Cart {
 
         var parameters: Parameters? {
             return [
-                "productId": cart.productId ,
-                "quantity": cart.quantity 
+                "productId": cart.productId ?? 0,
+                "quantity": cart.quantity ?? 0
             ]
         }
     }
@@ -99,7 +99,7 @@ extension Cart {
 
         var parameters: Parameters? {
             return [
-                "productId": cart.productId 
+                "productId": cart.productId ?? 0
             ]
         }
     }

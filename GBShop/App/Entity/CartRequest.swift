@@ -8,6 +8,6 @@
 import Foundation
 
 struct CartRequest {
-    var productId: Int
-    var quantity: Int
+    var productId: Int?
+    var quantity: Int?
 }

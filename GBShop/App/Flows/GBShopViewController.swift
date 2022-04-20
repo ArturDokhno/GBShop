@@ -20,6 +20,10 @@ class GBShopViewController: UIViewController {
         makeLogoutRequest()
         makeGetCatalogRequest()
         mageGetGoodsRequest()
+        makeGetCartRequest()
+        makePayCartRequest()
+        makeAddToCartRequest()
+        makeDeleteFromCartRequest()
     }
     
     // MARK: - Test methods.
@@ -30,10 +34,10 @@ class GBShopViewController: UIViewController {
         
         factory.login(user: user) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -50,10 +54,10 @@ class GBShopViewController: UIViewController {
         
         factory.signup(user: user) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -70,10 +74,10 @@ class GBShopViewController: UIViewController {
         
         factory.changeUserData(user: user) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -84,10 +88,10 @@ class GBShopViewController: UIViewController {
         
         factory.logout(user: user) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -97,10 +101,10 @@ class GBShopViewController: UIViewController {
         
         factory.getCatalog(pageNumber: 1, categoryId: 1) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -110,50 +114,106 @@ class GBShopViewController: UIViewController {
         
         factory.getGood(productId: 123) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
     
     func makeGetReviewsRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         
         factory.getReviews(productId: 123) { response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
     
     func makeAddReviewRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         let review = ReviewRequest(reviewText: "Товар — говно! Не берите!", userId: 123, productId: 666)
         
         factory.addReview(review: review){ response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
     
     func makeRemoveReviewRequest() {
-        let factory = requestFactory.makeReviewsFactory()
+        let factory = requestFactory.makeReviewsRequestFactory()
         
         factory.removeReview(reviewId: 123){ response in
             switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeGetCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.getCart(user: User(id: 123)){ response in
+            switch response.result {
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makePayCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.payCart(user: User(id: 123)){ response in
+            switch response.result {
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeAddToCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666, quantity: 1)
+        
+        factory.addToCart(cart: cart){ response in
+            switch response.result {
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeDeleteFromCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666)
+        
+        factory.deleteFromCart(cart: cart){ response in
+            switch response.result {
+                case .success(let result):
+                    print(result)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
