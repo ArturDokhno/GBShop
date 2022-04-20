@@ -38,6 +38,7 @@
 		75E2F74D27ECACBB0029DE5C /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F74C27ECACBB0029DE5C /* ChangeUserDataResult.swift */; };
 		75F09F53280FE47F00F14AE8 /* CartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F09F52280FE47F00F14AE8 /* CartRequest.swift */; };
 		75F09F55280FE4CF00F14AE8 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F09F54280FE4CF00F14AE8 /* CartResponse.swift */; };
+		75F09F57280FE5B000F14AE8 /* CartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F09F56280FE5B000F14AE8 /* CartRequestFactory.swift */; };
 		75FED20927FC226B00EF5BB7 /* CatalogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED20827FC226B00EF5BB7 /* CatalogResponse.swift */; };
 		75FED20B27FC230600EF5BB7 /* GoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED20A27FC230600EF5BB7 /* GoodResponse.swift */; };
 		75FED20D27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FED20C27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift */; };
@@ -99,6 +100,7 @@
 		75E2F74C27ECACBB0029DE5C /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
 		75F09F52280FE47F00F14AE8 /* CartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequest.swift; sourceTree = "<group>"; };
 		75F09F54280FE4CF00F14AE8 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
+		75F09F56280FE5B000F14AE8 /* CartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequestFactory.swift; sourceTree = "<group>"; };
 		75FED20827FC226B00EF5BB7 /* CatalogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResponse.swift; sourceTree = "<group>"; };
 		75FED20A27FC230600EF5BB7 /* GoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodResponse.swift; sourceTree = "<group>"; };
 		75FED20C27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogRequestFactory.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				75FED21227FC26E300EF5BB7 /* GetGoods.swift */,
 				75CB5FD3280B26C00019CDD5 /* ReviewRequestFactory.swift */,
 				75CB5FD5280B26DB0019CDD5 /* Reviews.swift */,
+				75F09F56280FE5B000F14AE8 /* CartRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				75CB5FD4280B26C00019CDD5 /* ReviewRequestFactory.swift in Sources */,
 				75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */,
 				75E2F73727EB66250029DE5C /* AuthRequestFactory.swift in Sources */,
+				75F09F57280FE5B000F14AE8 /* CartRequestFactory.swift in Sources */,
 				75E2F74D27ECACBB0029DE5C /* ChangeUserDataResult.swift in Sources */,
 				75FED20D27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift in Sources */,
 				75A69E2227EB619A002AE8E5 /* RequestRouter.swift in Sources */,
