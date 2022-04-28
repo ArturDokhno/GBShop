@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		7510201B27F7365600D0A5AC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */; };
 		75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */; };
+		75A080C9281ABCD4005E1FC7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */; };
+		75A080CC281ABFB6005E1FC7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CB281ABFB6005E1FC7 /* Logger.swift */; };
+		75A080CE281AC0B3005E1FC7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */; };
+		75A080D0281AC1E0005E1FC7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */; };
+		75A080D2281AC1F2005E1FC7 /* EditDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */; };
+		75A080D4281AC202005E1FC7 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */; };
+		75A080D6281AC221005E1FC7 /* EditDataSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */; };
 		75A69E1927EB46D9002AE8E5 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */; };
 		75A69E1C27EB48D3002AE8E5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 75A69E1B27EB48D3002AE8E5 /* Alamofire */; };
 		75A69E1E27EB4909002AE8E5 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A69E1D27EB4909002AE8E5 /* ResponseCodable.swift */; };
@@ -69,6 +76,13 @@
 /* Begin PBXFileReference section */
 		7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsractErrorParser.swift; sourceTree = "<group>"; };
+		75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		75A080CB281ABFB6005E1FC7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
+		75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataViewController.swift; sourceTree = "<group>"; };
+		75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataSuccessViewController.swift; sourceTree = "<group>"; };
 		75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		75A69E1D27EB4909002AE8E5 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
 		75A69E1F27EB4F93002AE8E5 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
@@ -246,8 +260,14 @@
 		75CDE50C27D637D80038488B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				75E2F73E27EC56790029DE5C /* GBShopViewController.swift */,
 				75E2F73C27EC56670029DE5C /* GBShop.storyboard */,
+				75E2F73E27EC56790029DE5C /* GBShopViewController.swift */,
+				75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */,
+				75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */,
+				75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */,
+				75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */,
+				75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */,
+				75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -256,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				75495FAD27EA0961005D3BF9 /* Network */,
+				75A080CB281ABFB6005E1FC7 /* Logger.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -439,27 +460,34 @@
 				75E2F74B27ECACA90029DE5C /* ChangeUserData.swift in Sources */,
 				75E2F73B27EC43800029DE5C /* RequestFactory.swift in Sources */,
 				75CDE4D927D62B170038488B /* AppDelegate.swift in Sources */,
+				75A080D2281AC1F2005E1FC7 /* EditDataViewController.swift in Sources */,
+				75A080CE281AC0B3005E1FC7 /* SignupSuccessViewController.swift in Sources */,
 				75CB5FDA280B27A70019CDD5 /* DefaultResponse.swift in Sources */,
 				75FED20B27FC230600EF5BB7 /* GoodResponse.swift in Sources */,
 				75FED21127FC267500EF5BB7 /* GetGoodsRequestFactory.swift in Sources */,
 				75A69E1E27EB4909002AE8E5 /* ResponseCodable.swift in Sources */,
 				75CB5FD4280B26C00019CDD5 /* ReviewRequestFactory.swift in Sources */,
 				75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */,
+				75A080D4281AC202005E1FC7 /* WelcomeScreenViewController.swift in Sources */,
 				75E2F73727EB66250029DE5C /* AuthRequestFactory.swift in Sources */,
 				75F09F57280FE5B000F14AE8 /* CartRequestFactory.swift in Sources */,
 				75E2F74D27ECACBB0029DE5C /* ChangeUserDataResult.swift in Sources */,
 				75FED20D27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift in Sources */,
 				75A69E2227EB619A002AE8E5 /* RequestRouter.swift in Sources */,
 				75CB5FD6280B26DB0019CDD5 /* Reviews.swift in Sources */,
+				75A080D0281AC1E0005E1FC7 /* AuthViewController.swift in Sources */,
 				75F09F59280FE69100F14AE8 /* Cart.swift in Sources */,
 				75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */,
 				75E2F74727ECA0E80029DE5C /* Signup.swift in Sources */,
 				75A69E2627EB64B3002AE8E5 /* ReviewResponse.swift in Sources */,
 				75E2F73927EB671C0029DE5C /* Auth.swift in Sources */,
+				75A080D6281AC221005E1FC7 /* EditDataSuccessViewController.swift in Sources */,
 				75E2F73427EB65710029DE5C /* User.swift in Sources */,
 				75E2F74927ECAC970029DE5C /* ChangeUserDataRequestFactory.swift in Sources */,
 				75E2F74527ECA0AA0029DE5C /* SignupRequestFactory.swift in Sources */,
 				75CDE4DB27D62B170038488B /* SceneDelegate.swift in Sources */,
+				75A080C9281ABCD4005E1FC7 /* SignupViewController.swift in Sources */,
+				75A080CC281ABFB6005E1FC7 /* Logger.swift in Sources */,
 				75F09F53280FE47F00F14AE8 /* CartRequest.swift in Sources */,
 				75FED20927FC226B00EF5BB7 /* CatalogResponse.swift in Sources */,
 				75F09F55280FE4CF00F14AE8 /* CartResponse.swift in Sources */,
