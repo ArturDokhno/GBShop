@@ -8,35 +8,34 @@
 import XCTest
 @testable import GBShop
 
-class RequestTests: XCTestCase {
+class RequestsTests: XCTestCase {
     
-    let timeout = 10.0
+    let timeoutValue = 10.0
     
     var requestFactory: RequestFactory!
     var user: User!
     
-    let expectation = XCTestExpectation(description: "Perform request")
-    
+    let expectation = XCTestExpectation(description: "Perform request.")
+
     override func setUpWithError() throws {
         try? super.setUpWithError()
         requestFactory = RequestFactory()
-        user = User(id: 123,
-                    login: "Somebody",
+        user = User(login: "SomebodyElse",
                     password: "mypassword",
-                    email: "some@some.ru",
-                    gender: "m",
-                    creditCard: "9872389-2424-234224-23",
-                    bio: "This is good! I think I will switch to another language",
-                    name: "John",
+                    email: "janedoe@gmail.com",
+                    gender: "f",
+                    creditCard: "2344-4324-2344-1233-1234",
+                    bio: "Nothin to tell ya folks %)",
+                    name: "Jane",
                     lastname: "Doe")
     }
-    
+
     override func tearDownWithError() throws {
         try? super.tearDownWithError()
         requestFactory = nil
         user = nil
     }
-    
+
     func testShouldPerformSignupRequest() {
         let factory = requestFactory.makeSignupRequestFactory()
         
@@ -47,7 +46,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformAuthRequest() {
@@ -60,7 +59,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformChangeUserDataRequest() {
@@ -73,7 +72,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformLogoutRequest() {
@@ -86,7 +85,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformGetCatalogRequest() {
@@ -99,12 +98,11 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformGetGoodRequest() {
         let factory = requestFactory.makeGetGoodsRequestFactory()
-        
         factory.getGood(productId: 123) { response in
             switch response.result {
             case .success(let result): XCTAssertEqual(result.result, 1)
@@ -112,7 +110,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformGetReviewsRequest() {
@@ -125,7 +123,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformAddReviewsRequest() {
@@ -138,7 +136,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformRemoveReviewsRequest() {
@@ -151,7 +149,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformGetCartRequest() {
@@ -164,7 +162,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformPayCartRequest() {
@@ -177,7 +175,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformAddToCartRequest() {
@@ -190,7 +188,7 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
     
     func testShouldPerformDeleteFromCartRequest() {
@@ -203,6 +201,6 @@ class RequestTests: XCTestCase {
             }
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: timeout)
+        wait(for: [expectation], timeout: timeoutValue)
     }
 }
