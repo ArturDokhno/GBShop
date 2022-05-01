@@ -1,5 +1,5 @@
 //
-//  EditDataViewController.swift
+//  SignupViewController.swift
 //  GBShop
 //
 //  Created by Артур Дохно on 28.04.2022.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-class EditDataViewController: UIViewController {
+class SignupViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var formStackView: UIStackView!
     
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var bioTextField: UITextField!
     
-    @IBOutlet weak var saveDataButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     
     let requestFactory = RequestFactory()
     
@@ -37,7 +37,10 @@ class EditDataViewController: UIViewController {
     }
     
     private func setupControls() {
-        [loginTextField, passwordTextField, firstNameTextField, lastNameTextField, emailTextField, bioTextField].forEach {
+        signupButton.backgroundColor = UIColor.opaqueSeparator
+        signupButton.isEnabled = false
+        
+        [firstNameTextField, lastNameTextField, emailTextField, loginTextField, passwordTextField, bioTextField].forEach {
             $0.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         }
     }
@@ -85,19 +88,21 @@ class EditDataViewController: UIViewController {
     
     @objc func editingChanged(_ textField: UITextField) {
         guard isFormFilled() else {
-            saveDataButton.backgroundColor = UIColor.opaqueSeparator
-            saveDataButton.isEnabled = false
+            signupButton.backgroundColor = UIColor.opaqueSeparator
+            signupButton.isEnabled = false
             return
         }
         
-        saveDataButton.backgroundColor = UIColor.systemOrange
-        saveDataButton.isEnabled = true
+        signupButton.backgroundColor = UIColor.systemOrange
+        signupButton.isEnabled = true
     }
     
     // MARK: -- Success & Error Messages.
     private func showSuccessScreen() {
-        let editDataSuccessViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessViewController") as! EditDataSuccessViewController
-        navigationController?.pushViewController(editDataSuccessViewController, animated: true)
+        let signupSuccessViewController = self.storyboard?.instantiateViewController(withIdentifier: "SignupSuccessViewController") as! SignupSuccessViewController
+        
+        signupSuccessViewController.modalPresentationStyle = .fullScreen
+        self.present(signupSuccessViewController, animated: true, completion: nil)
     }
     
     private func showError(_ errorMessage: String) {
@@ -107,13 +112,13 @@ class EditDataViewController: UIViewController {
     }
     
     // MARK: -- Actions.
-    @IBAction func saveDataButtonTapped(_ sender: Any) {
-        saveDataButton.backgroundColor = UIColor.opaqueSeparator
-        saveDataButton.isEnabled = false
+    @IBAction func signupButtonTapped(_ sender: Any) {
         
-        let factory = requestFactory.makeChangeUserDataRequestFactory()
-        let user = User(id: 123,
-                        login: loginTextField.text,
+        signupButton.backgroundColor = UIColor.opaqueSeparator
+        signupButton.isEnabled = false
+        
+        let factory = requestFactory.makeSignupRequestFactory()
+        let user = User(login: loginTextField.text,
                         password: passwordTextField.text,
                         email: emailTextField.text,
                         gender: genderSegmentedControl.selectedSegmentIndex == 0 ? "M" : "F",
@@ -121,7 +126,7 @@ class EditDataViewController: UIViewController {
                         name: firstNameTextField.text,
                         lastname: lastNameTextField.text)
         
-        factory.changeUserData(user: user) { response in
+        factory.signup(user: user) { response in
             DispatchQueue.main.async {
                 logging(LogMessage.funcStart)
                 logging(response)
@@ -136,9 +141,17 @@ class EditDataViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        let welcomeScreenViewController = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeScreenViewController") as! WelcomeScreenViewController
-        navigationController?.pushViewController(welcomeScreenViewController, animated: true)
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        firstNameTextField.text = ""
+        lastNameTextField.text = ""
+        emailTextField.text = ""
+        genderSegmentedControl.selectedSegmentIndex = 0
+        loginTextField.text = ""
+        passwordTextField.text = ""
+        bioTextField.text = ""
+        
+        signupButton.backgroundColor = UIColor.opaqueSeparator
+        signupButton.isEnabled = false
     }
     
     // MARK: -- ViewController methods.

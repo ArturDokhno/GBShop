@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7510201B27F7365600D0A5AC /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */; };
+		75325272281E74EE00963EA0 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75325271281E74EE00963EA0 /* RoundedImageView.swift */; };
+		75325276281E751100963EA0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75325275281E751100963EA0 /* Extensions.swift */; };
+		7532527A281E754E00963EA0 /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75325279281E754E00963EA0 /* CatalogTableViewController.swift */; };
+		7532527C281E756900963EA0 /* CatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532527B281E756900963EA0 /* CatalogTableViewCell.swift */; };
+		7532527F281E759A00963EA0 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7532527E281E759A00963EA0 /* AlamofireImage */; };
 		75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */; };
 		75A080C9281ABCD4005E1FC7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */; };
 		75A080CC281ABFB6005E1FC7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CB281ABFB6005E1FC7 /* Logger.swift */; };
 		75A080CE281AC0B3005E1FC7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */; };
 		75A080D0281AC1E0005E1FC7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */; };
 		75A080D2281AC1F2005E1FC7 /* EditDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */; };
-		75A080D4281AC202005E1FC7 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */; };
 		75A080D6281AC221005E1FC7 /* EditDataSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */; };
 		75A69E1927EB46D9002AE8E5 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */; };
 		75A69E1C27EB48D3002AE8E5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 75A69E1B27EB48D3002AE8E5 /* Alamofire */; };
@@ -75,13 +79,16 @@
 
 /* Begin PBXFileReference section */
 		7510201A27F7365600D0A5AC /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
+		75325271281E74EE00963EA0 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		75325275281E751100963EA0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		75325279281E754E00963EA0 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
+		7532527B281E756900963EA0 /* CatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewCell.swift; sourceTree = "<group>"; };
 		75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsractErrorParser.swift; sourceTree = "<group>"; };
 		75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		75A080CB281ABFB6005E1FC7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
 		75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataViewController.swift; sourceTree = "<group>"; };
-		75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataSuccessViewController.swift; sourceTree = "<group>"; };
 		75A69E1827EB46D9002AE8E5 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		75A69E1D27EB4909002AE8E5 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
@@ -132,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A69E1C27EB48D3002AE8E5 /* Alamofire in Frameworks */,
+				7532527F281E759A00963EA0 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +160,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75325270281E74E400963EA0 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				75A080CB281ABFB6005E1FC7 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		75325273281E74F700963EA0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				75325271281E74EE00963EA0 /* RoundedImageView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		75325274281E750A00963EA0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75325275281E751100963EA0 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75325277281E752D00963EA0 /* EditPersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */,
+				75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */,
+			);
+			path = EditPersonalData;
+			sourceTree = "<group>";
+		};
+		75325278281E753900963EA0 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				75325279281E754E00963EA0 /* CatalogTableViewController.swift */,
+				7532527B281E756900963EA0 /* CatalogTableViewCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		75325280281E75B000963EA0 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */,
+				75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		75325281281E75C300963EA0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		75495FAD27EA0961005D3BF9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,12 +329,10 @@
 			children = (
 				75E2F73C27EC56670029DE5C /* GBShop.storyboard */,
 				75E2F73E27EC56790029DE5C /* GBShopViewController.swift */,
-				75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */,
-				75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */,
-				75A080CF281AC1E0005E1FC7 /* AuthViewController.swift */,
-				75A080D1281AC1F2005E1FC7 /* EditDataViewController.swift */,
-				75A080D3281AC202005E1FC7 /* WelcomeScreenViewController.swift */,
-				75A080D5281AC221005E1FC7 /* EditDataSuccessViewController.swift */,
+				75325281281E75C300963EA0 /* Auth */,
+				75325280281E75B000963EA0 /* Signup */,
+				75325278281E753900963EA0 /* Catalog */,
+				75325277281E752D00963EA0 /* EditPersonalData */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -275,8 +340,10 @@
 		75CDE50D27D637F20038488B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				75325274281E750A00963EA0 /* Extensions */,
 				75495FAD27EA0961005D3BF9 /* Network */,
-				75A080CB281ABFB6005E1FC7 /* Logger.swift */,
+				75325273281E74F700963EA0 /* UIComponents */,
+				75325270281E74E400963EA0 /* Logger */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -301,7 +368,6 @@
 		75E2F73527EB660E0029DE5C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				75E2F73A27EC43800029DE5C /* RequestFactory.swift */,
 				75E2F73627EB66250029DE5C /* AuthRequestFactory.swift */,
 				75E2F73827EB671C0029DE5C /* Auth.swift */,
 				75E2F74427ECA0AA0029DE5C /* SignupRequestFactory.swift */,
@@ -316,6 +382,7 @@
 				75CB5FD5280B26DB0019CDD5 /* Reviews.swift */,
 				75F09F56280FE5B000F14AE8 /* CartRequestFactory.swift */,
 				75F09F58280FE69100F14AE8 /* Cart.swift */,
+				75E2F73A27EC43800029DE5C /* RequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -338,6 +405,7 @@
 			name = GBShop;
 			packageProductDependencies = (
 				75A69E1B27EB48D3002AE8E5 /* Alamofire */,
+				7532527E281E759A00963EA0 /* AlamofireImage */,
 			);
 			productName = GBShop;
 			productReference = 75CDE4D527D62B170038488B /* GBShop.app */;
@@ -413,6 +481,7 @@
 			mainGroup = 75CDE4CC27D62B170038488B;
 			packageReferences = (
 				75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7532527D281E759A00963EA0 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 75CDE4D627D62B170038488B /* Products */;
 			projectDirPath = "";
@@ -467,12 +536,13 @@
 				75FED21127FC267500EF5BB7 /* GetGoodsRequestFactory.swift in Sources */,
 				75A69E1E27EB4909002AE8E5 /* ResponseCodable.swift in Sources */,
 				75CB5FD4280B26C00019CDD5 /* ReviewRequestFactory.swift in Sources */,
+				7532527C281E756900963EA0 /* CatalogTableViewCell.swift in Sources */,
 				75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */,
-				75A080D4281AC202005E1FC7 /* WelcomeScreenViewController.swift in Sources */,
 				75E2F73727EB66250029DE5C /* AuthRequestFactory.swift in Sources */,
 				75F09F57280FE5B000F14AE8 /* CartRequestFactory.swift in Sources */,
 				75E2F74D27ECACBB0029DE5C /* ChangeUserDataResult.swift in Sources */,
 				75FED20D27FC23D100EF5BB7 /* GetCatalogRequestFactory.swift in Sources */,
+				75325272281E74EE00963EA0 /* RoundedImageView.swift in Sources */,
 				75A69E2227EB619A002AE8E5 /* RequestRouter.swift in Sources */,
 				75CB5FD6280B26DB0019CDD5 /* Reviews.swift in Sources */,
 				75A080D0281AC1E0005E1FC7 /* AuthViewController.swift in Sources */,
@@ -480,6 +550,7 @@
 				75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */,
 				75E2F74727ECA0E80029DE5C /* Signup.swift in Sources */,
 				75A69E2627EB64B3002AE8E5 /* ReviewResponse.swift in Sources */,
+				75325276281E751100963EA0 /* Extensions.swift in Sources */,
 				75E2F73927EB671C0029DE5C /* Auth.swift in Sources */,
 				75A080D6281AC221005E1FC7 /* EditDataSuccessViewController.swift in Sources */,
 				75E2F73427EB65710029DE5C /* User.swift in Sources */,
@@ -491,6 +562,7 @@
 				75F09F53280FE47F00F14AE8 /* CartRequest.swift in Sources */,
 				75FED20927FC226B00EF5BB7 /* CatalogResponse.swift in Sources */,
 				75F09F55280FE4CF00F14AE8 /* CartResponse.swift in Sources */,
+				7532527A281E754E00963EA0 /* CatalogTableViewController.swift in Sources */,
 				75CB5FD8280B27900019CDD5 /* ReviewRequest.swift in Sources */,
 				75A69E2027EB4F93002AE8E5 /* AbstractRequestFactory.swift in Sources */,
 				75FED20F27FC244A00EF5BB7 /* GetCatalog.swift in Sources */,
@@ -834,6 +906,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7532527D281E759A00963EA0 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -845,6 +925,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7532527E281E759A00963EA0 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7532527D281E759A00963EA0 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		75A69E1B27EB48D3002AE8E5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */;
