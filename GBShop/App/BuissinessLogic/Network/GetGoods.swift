@@ -24,7 +24,7 @@ class GetGood: AbstractRequestFactory {
         }
 }
 
-extension GetGood: GetGoodsRequestFactory {
+extension GetGood: GetGoodRequestFactory {
     func getGood(productId: Int, completionHandler: @escaping (AFDataResponse<GoodResponse>) -> Void) {
         let requestModel = GetGood(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
