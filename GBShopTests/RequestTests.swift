@@ -102,7 +102,8 @@ class RequestsTests: XCTestCase {
     }
     
     func testShouldPerformGetGoodRequest() {
-        let factory = requestFactory.makeGetGoodsRequestFactory()
+        let factory = requestFactory.makeGetGoodRequestFactory()
+        
         factory.getGood(productId: 123) { response in
             switch response.result {
             case .success(let result): XCTAssertEqual(result.result, 1)

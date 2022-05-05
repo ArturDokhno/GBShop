@@ -41,7 +41,7 @@
 		75E2F73927EB671C0029DE5C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73827EB671C0029DE5C /* Auth.swift */; };
 		75E2F73B27EC43800029DE5C /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73A27EC43800029DE5C /* RequestFactory.swift */; };
 		75E2F73D27EC56670029DE5C /* GBShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E2F73C27EC56670029DE5C /* GBShop.storyboard */; };
-		75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73E27EC56790029DE5C /* GBShopViewController.swift */; };
+		75E2F73F27EC56790029DE5C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F73E27EC56790029DE5C /* ItemViewController.swift */; };
 		75E2F74527ECA0AA0029DE5C /* SignupRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F74427ECA0AA0029DE5C /* SignupRequestFactory.swift */; };
 		75E2F74727ECA0E80029DE5C /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F74627ECA0E80029DE5C /* Signup.swift */; };
 		75E2F74927ECAC970029DE5C /* ChangeUserDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E2F74827ECAC970029DE5C /* ChangeUserDataRequestFactory.swift */; };
@@ -114,7 +114,7 @@
 		75E2F73827EB671C0029DE5C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		75E2F73A27EC43800029DE5C /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		75E2F73C27EC56670029DE5C /* GBShop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GBShop.storyboard; sourceTree = "<group>"; };
-		75E2F73E27EC56790029DE5C /* GBShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopViewController.swift; sourceTree = "<group>"; };
+		75E2F73E27EC56790029DE5C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		75E2F74427ECA0AA0029DE5C /* SignupRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequestFactory.swift; sourceTree = "<group>"; };
 		75E2F74627ECA0E80029DE5C /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		75E2F74827ECAC970029DE5C /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestFactory.swift; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				75E2F73C27EC56670029DE5C /* GBShop.storyboard */,
-				75E2F73E27EC56790029DE5C /* GBShopViewController.swift */,
+				75E2F73E27EC56790029DE5C /* ItemViewController.swift */,
 				75325281281E75C300963EA0 /* Auth */,
 				75325280281E75B000963EA0 /* Signup */,
 				75325278281E753900963EA0 /* Catalog */,
@@ -537,7 +537,7 @@
 				75A69E1E27EB4909002AE8E5 /* ResponseCodable.swift in Sources */,
 				75CB5FD4280B26C00019CDD5 /* ReviewRequestFactory.swift in Sources */,
 				7532527C281E756900963EA0 /* CatalogTableViewCell.swift in Sources */,
-				75E2F73F27EC56790029DE5C /* GBShopViewController.swift in Sources */,
+				75E2F73F27EC56790029DE5C /* ItemViewController.swift in Sources */,
 				75E2F73727EB66250029DE5C /* AuthRequestFactory.swift in Sources */,
 				75F09F57280FE5B000F14AE8 /* CartRequestFactory.swift in Sources */,
 				75E2F74D27ECACBB0029DE5C /* ChangeUserDataResult.swift in Sources */,

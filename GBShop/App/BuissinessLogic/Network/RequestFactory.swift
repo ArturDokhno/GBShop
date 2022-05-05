@@ -44,7 +44,7 @@ class RequestFactory {
         return GetCatalog(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
     
-    func makeGetGoodsRequestFactory() -> GetGoodsRequestFactory {
+    func makeGetGoodRequestFactory() -> GetGoodRequestFactory {
         let errorParser = makeErrorParser()
         return GetGood(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
@@ -59,3 +59,4 @@ class RequestFactory {
         return Cart(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
 }
+
