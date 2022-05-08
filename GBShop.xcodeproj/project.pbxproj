@@ -14,6 +14,11 @@
 		7532527C281E756900963EA0 /* CatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7532527B281E756900963EA0 /* CatalogTableViewCell.swift */; };
 		7532527F281E759A00963EA0 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7532527E281E759A00963EA0 /* AlamofireImage */; };
 		75495FAF27EA09C6005D3BF9 /* AbsractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */; };
+		755E36AE2827F9C800C24E33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 755E36AD2827F9C800C24E33 /* Alamofire */; };
+		755E36B12827F9DD00C24E33 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 755E36B02827F9DD00C24E33 /* AlamofireImage */; };
+		755E36B42827FB0500C24E33 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E36B32827FB0500C24E33 /* CartTableViewController.swift */; };
+		755E36B62827FB1B00C24E33 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E36B52827FB1B00C24E33 /* CartTableViewCell.swift */; };
+		755E36B92827FB9E00C24E33 /* AppCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E36B82827FB9E00C24E33 /* AppCart.swift */; };
 		75A080C9281ABCD4005E1FC7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */; };
 		75A080CC281ABFB6005E1FC7 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CB281ABFB6005E1FC7 /* Logger.swift */; };
 		75A080CE281AC0B3005E1FC7 /* SignupSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */; };
@@ -84,6 +89,9 @@
 		75325279281E754E00963EA0 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		7532527B281E756900963EA0 /* CatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewCell.swift; sourceTree = "<group>"; };
 		75495FAE27EA09C6005D3BF9 /* AbsractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsractErrorParser.swift; sourceTree = "<group>"; };
+		755E36B32827FB0500C24E33 /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
+		755E36B52827FB1B00C24E33 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		755E36B82827FB9E00C24E33 /* AppCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCart.swift; sourceTree = "<group>"; };
 		75A080C8281ABCD4005E1FC7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		75A080CB281ABFB6005E1FC7 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		75A080CD281AC0B3005E1FC7 /* SignupSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSuccessViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755E36AE2827F9C800C24E33 /* Alamofire in Frameworks */,
+				755E36B12827F9DD00C24E33 /* AlamofireImage in Frameworks */,
 				75A69E1C27EB48D3002AE8E5 /* Alamofire in Frameworks */,
 				7532527F281E759A00963EA0 /* AlamofireImage in Frameworks */,
 			);
@@ -231,6 +241,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		755E36B22827FAD800C24E33 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				755E36B32827FB0500C24E33 /* CartTableViewController.swift */,
+				755E36B52827FB1B00C24E33 /* CartTableViewCell.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		755E36B72827FB9200C24E33 /* AppCart */ = {
+			isa = PBXGroup;
+			children = (
+				755E36B82827FB9E00C24E33 /* AppCart.swift */,
+			);
+			path = AppCart;
+			sourceTree = "<group>";
+		};
 		75CDE4CC27D62B170038488B = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +323,7 @@
 		75CDE50927D637720038488B /* BuissinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				755E36B72827FB9200C24E33 /* AppCart */,
 				75E2F73527EB660E0029DE5C /* Network */,
 			);
 			path = BuissinessLogic;
@@ -328,11 +356,12 @@
 			isa = PBXGroup;
 			children = (
 				75E2F73C27EC56670029DE5C /* GBShop.storyboard */,
-				75E2F73E27EC56790029DE5C /* ItemViewController.swift */,
 				75325281281E75C300963EA0 /* Auth */,
 				75325280281E75B000963EA0 /* Signup */,
 				75325278281E753900963EA0 /* Catalog */,
+				755E36B22827FAD800C24E33 /* Cart */,
 				75325277281E752D00963EA0 /* EditPersonalData */,
+				75E2F73E27EC56790029DE5C /* ItemViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -406,6 +435,8 @@
 			packageProductDependencies = (
 				75A69E1B27EB48D3002AE8E5 /* Alamofire */,
 				7532527E281E759A00963EA0 /* AlamofireImage */,
+				755E36AD2827F9C800C24E33 /* Alamofire */,
+				755E36B02827F9DD00C24E33 /* AlamofireImage */,
 			);
 			productName = GBShop;
 			productReference = 75CDE4D527D62B170038488B /* GBShop.app */;
@@ -482,6 +513,8 @@
 			packageReferences = (
 				75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7532527D281E759A00963EA0 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				755E36AC2827F9C800C24E33 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				755E36AF2827F9DD00C24E33 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 75CDE4D627D62B170038488B /* Products */;
 			projectDirPath = "";
@@ -552,7 +585,9 @@
 				75A69E2627EB64B3002AE8E5 /* ReviewResponse.swift in Sources */,
 				75325276281E751100963EA0 /* Extensions.swift in Sources */,
 				75E2F73927EB671C0029DE5C /* Auth.swift in Sources */,
+				755E36B92827FB9E00C24E33 /* AppCart.swift in Sources */,
 				75A080D6281AC221005E1FC7 /* EditDataSuccessViewController.swift in Sources */,
+				755E36B62827FB1B00C24E33 /* CartTableViewCell.swift in Sources */,
 				75E2F73427EB65710029DE5C /* User.swift in Sources */,
 				75E2F74927ECAC970029DE5C /* ChangeUserDataRequestFactory.swift in Sources */,
 				75E2F74527ECA0AA0029DE5C /* SignupRequestFactory.swift in Sources */,
@@ -564,6 +599,7 @@
 				75F09F55280FE4CF00F14AE8 /* CartResponse.swift in Sources */,
 				7532527A281E754E00963EA0 /* CatalogTableViewController.swift in Sources */,
 				75CB5FD8280B27900019CDD5 /* ReviewRequest.swift in Sources */,
+				755E36B42827FB0500C24E33 /* CartTableViewController.swift in Sources */,
 				75A69E2027EB4F93002AE8E5 /* AbstractRequestFactory.swift in Sources */,
 				75FED20F27FC244A00EF5BB7 /* GetCatalog.swift in Sources */,
 				75A69E1927EB46D9002AE8E5 /* ErrorParser.swift in Sources */,
@@ -914,6 +950,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		755E36AC2827F9C800C24E33 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		755E36AF2827F9DD00C24E33 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -928,6 +980,16 @@
 		7532527E281E759A00963EA0 /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7532527D281E759A00963EA0 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		755E36AD2827F9C800C24E33 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75A69E1A27EB48D3002AE8E5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		755E36B02827F9DD00C24E33 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 755E36AF2827F9DD00C24E33 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
 		};
 		75A69E1B27EB48D3002AE8E5 /* Alamofire */ = {
